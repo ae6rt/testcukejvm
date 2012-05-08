@@ -18,18 +18,19 @@ public class BellyStepDefs {
     @Autowired
     public BellyStepDefs(final Belly belly) {
         this.belly = belly;
-//        System.out.println("belly: " + belly);
+        System.out.println("### F");
     }
 
     @Given("^I have (\\d+) beans in my belly$")
     public void I_have_beans_in_my_belly(int n) {
         bellyBean.setCukes(n);
-//        System.out.println("bellyBean: " + bellyBean);
+        System.out.println("### A");
     }
 
     @Then("^there are (\\d+) beans in my belly$")
     public void there_are_beans_in_my_belly(int n) {
         assertEquals(n, bellyBean.getCukes());
+        System.out.println("### B");
     }
 
     //
@@ -37,11 +38,13 @@ public class BellyStepDefs {
     @Given("^I have (\\d+) cukes in my belly")
     public void haveCukes(final int n) {
         belly.setCukes(n);
+        System.out.println("### C");
     }
 
     @Then("^there are (\\d+) cukes in my belly")
     public void checkCukes(final int n) {
         assertEquals(n, belly.getCukes());
+        System.out.println("### D");
     }
 
 }
