@@ -10,6 +10,7 @@ public class GlueCodeContext {
     private int counter;
 
     private GlueCodeContext() {
+        System.out.println("### GlueCodeContext");
     }
 
     public void start() {

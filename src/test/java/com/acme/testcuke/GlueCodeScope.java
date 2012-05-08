@@ -8,6 +8,10 @@ public class GlueCodeScope implements Scope {
 
     private final GlueCodeContext context = GlueCodeContext.INSTANCE;
 
+    public GlueCodeScope() {
+        System.out.println("### GlueCodeScope");
+    }
+
     @Override
     public Object get(String name, ObjectFactory<?> objectFactory) {
         Object obj = context.get(name);

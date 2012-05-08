@@ -36,6 +36,7 @@ public class SpringFactory implements ObjectFactory {
     private final Collection<Class<?>> stepClasses = new HashSet<Class<?>>();
 
     public SpringFactory() {
+        System.out.println("### SpringFactory");
     }
 
     static {
