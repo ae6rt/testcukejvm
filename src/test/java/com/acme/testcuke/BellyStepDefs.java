@@ -18,11 +18,13 @@ public class BellyStepDefs {
     @Autowired
     public BellyStepDefs(final Belly belly) {
         this.belly = belly;
+//        System.out.println("belly: " + belly);
     }
 
     @Given("^I have (\\d+) beans in my belly$")
     public void I_have_beans_in_my_belly(int n) {
         bellyBean.setCukes(n);
+//        System.out.println("bellyBean: " + bellyBean);
     }
 
     @Then("^there are (\\d+) beans in my belly$")
